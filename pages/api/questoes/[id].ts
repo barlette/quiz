@@ -8,7 +8,7 @@ export default function handler(req, res) {
   );
   if (unicaQuestaoOuNada.length === 1) {
     const questaoSelecionada = unicaQuestaoOuNada[0].embaralharRespostas();
-    const obj = questaoSelecionada.responderCom(0).paraObjeto();
+    const obj = questaoSelecionada.paraObjeto();
     res.status(200).json(obj);
   } else {
     res.status(204).send();
